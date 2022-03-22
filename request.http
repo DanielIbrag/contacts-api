@@ -1,0 +1,52 @@
+###Contact index
+GET http://localhost:3000/contacts
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgwMDIyMDl9.Cr-U34DjlUp7NDon-I6wxyK4mQXj2DD0Jfjc23WDRKk
+
+
+###Contact Create
+POST http://localhost:3000/contacts
+Content-Type:application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgwMDIyMDl9.Cr-U34DjlUp7NDon-I6wxyK4mQXj2DD0Jfjc23WDRKk
+
+{
+    "first_name": "Dony",
+    "last_name": "DudeGuy2",
+    "email": "DonDude2@test.com",
+    "phone_number": "111-111-3344"
+  }
+  
+###Contact Show
+
+GET http://localhost:3000/contacts/2
+
+###Contact update
+
+PATCH http://localhost:3000/contacts/1
+Content-Type: application/json
+
+{
+  "first_name": "Daniel"
+}
+
+### Contact Delete
+DELETE http://localhost:3000/contacts/3
+
+### Users create (signup)
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Test name",
+  "email": "test@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "password"
+}
